@@ -1,0 +1,17 @@
+2025-06-09 22:20:26,747 - __main__ - ERROR - Please run: pip install -r requirements.txt
+2025-06-09 22:22:08,000 - __main__ - ERROR - Please run: pip install -r requirements.txt
+2025-06-09 22:29:24,305 - __main__ - ERROR - Missing required environment variables: SECRET_KEY, OPENAI_API_KEY
+2025-06-09 22:29:24,305 - __main__ - ERROR - Please set these variables or create a .env file
+2025-06-09 22:29:24,306 - __main__ - INFO - Example .env file:
+2025-06-09 22:29:24,306 - __main__ - INFO - SECRET_KEY=your-super-secret-jwt-key-here
+2025-06-09 22:29:24,306 - __main__ - INFO - OPENAI_API_KEY=your-openai-api-key
+2025-06-09 22:29:50,237 - __main__ - ERROR - Missing required environment variables: SECRET_KEY, OPENAI_API_KEY
+2025-06-09 22:29:50,245 - __main__ - ERROR - Please set these variables or create a .env file
+2025-06-09 22:29:50,246 - __main__ - INFO - Example .env file:
+2025-06-09 22:29:50,247 - __main__ - INFO - SECRET_KEY=your-super-secret-jwt-key-here
+2025-06-09 22:29:50,247 - __main__ - INFO - OPENAI_API_KEY=your-openai-api-key
+2025-06-09 22:31:36,496 - __main__ - INFO - Created directory: storage
+2025-06-09 22:31:36,498 - __main__ - INFO - Created directory: logs
+2025-06-09 22:31:53,272 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-06-09 22:31:54,093 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-09 22:31:54,107 - faiss - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
