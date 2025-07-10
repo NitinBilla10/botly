@@ -28,15 +28,14 @@ import Link_Component from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { toast } from 'sonner';
-import { getChatbot, uploadData, queryChatbot, getAnalytics } from '@/lib/api';
-import { Chatbot, Analytics } from '@/lib/types';
+import { getChatbot, uploadData, queryChatbot, getAnalytics, Chatbot as ApiChatbot, Analytics } from '@/lib/api';
 
 export default function ChatbotDetailPage() {
   const params = useParams();
   const router = useRouter();
   const chatbotId = parseInt(params.id as string);
   
-  const [chatbot, setChatbot] = useState<Chatbot | null>(null);
+  const [chatbot, setChatbot] = useState<ApiChatbot | null>(null);
   const [analytics, setAnalytics] = useState<Analytics[]>([]);
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
@@ -617,7 +616,7 @@ export default function ChatbotDetailPage() {
                 <CardTitle className="text-lg">Quick Actions</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button variant="outline" className="w-full justify-start" onClick={copyEmbedCode}>
+                <Button variant="outline" className="w-full justify-start" onClick={() => copyEmbedCode('widget', 'jsx')}>
                   <Copy className="h-4 w-4 mr-2" />
                   Copy Embed Code
                 </Button>

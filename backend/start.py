@@ -19,7 +19,8 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
 
     print("Starting Botly Backend Server...")
-    print(f"API will be available at: http://0.0.0.0:{port}")
+    print(f"API will be available at: http://0.0.0.0:{port}") 
+    
     print(f"API Documentation: http://0.0.0.0:{port}/docs")
     print(f"Health Check: http://0.0.0.0:{port}/health")
     print("\nPress CTRL+C to stop the server\n")
