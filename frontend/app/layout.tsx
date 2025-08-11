@@ -4,18 +4,42 @@ import { Inter } from 'next/font/google';
 import { Providers } from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const previewImage = `${baseUrl}/preview.png`;
 
 export const metadata: Metadata = {
-  title: 'Botly - AI Chatbot Platform',
-  description: 'Create intelligent chatbots for your website in minutes. Upload documents, train AI, and embed anywhere.',
-  keywords: 'chatbot, AI, customer support, automation, SaaS',
-  authors: [{ name: 'Botly Team' }],
+  title: "Botly - AI Chatbot Platform",
+  description:
+    "Create intelligent chatbots for your website in minutes. Upload documents, train AI, and embed anywhere.",
+  keywords: "chatbot, AI, customer support, automation, SaaS",
+  authors: [{ name: "Nitin Billa" }],
+    icons: {
+    icon: "/favicon.png", 
+  },
+
   openGraph: {
-    title: 'Botly - AI Chatbot Platform',
-    description: 'Create intelligent chatbots for your website in minutes.',
-    url: 'https://botly.com',
-    siteName: 'Botly',
-    type: 'website',
+    title: "Botly - AI Chatbot Platform",
+    description: "Create intelligent chatbots for your website in minutes.",
+    url: baseUrl,
+    siteName: "Botly",
+    type: "website",
+    images: [
+      {
+        url: previewImage,
+        width: 1200,
+        height: 630,
+        alt: "Botly AI Chatbot Preview",
+      },
+    ],
+    locale: "en_US",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Botly - AI Chatbot Platform",
+    description: "Create intelligent chatbots for your website in minutes.",
+    images: [previewImage],
+    creator: "@nitinbilla10", 
   },
 };
 
