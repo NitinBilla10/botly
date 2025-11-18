@@ -1,5 +1,4 @@
 ### chatbot_saas_backend/utils.py
-
 import os
 import requests
 from bs4 import BeautifulSoup
@@ -7,20 +6,26 @@ import fitz  # PyMuPDF
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models import Base
+
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_core.documents import Document
+
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.llms import OpenAI
-from sentence_transformers import SentenceTransformer
 from langchain_community.docstore import InMemoryDocstore
+from langchain_community.chains import RetrievalQA   # ✅ FIXED
+
+from sentence_transformers import SentenceTransformer
 import numpy as np
 import faiss
+
 from langchain_core.embeddings import Embeddings
-from langchain.chains import RetrievalQA
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+
 import openai
 from openai import APIError, RateLimitError, AuthenticationError
+
 
 
 
